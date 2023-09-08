@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PromptSync from 'prompt-sync';
 
 //Create a function that will take the parameter of farenheit and output celcius
 const farenheit = 95
@@ -88,3 +89,22 @@ export function reverseString(string1) {
 }
 
 reverseString(string1)
+
+// Create a function that says if the user number input is odd or even
+
+function numberOddOrEven() {
+    let userInput = PromptSync("Please input a number");
+    let userNumber = parseFloat(userInput);
+    
+    if(isNaN(userNumber)) {
+      console.log("Please input a valid number");
+    }
+  
+    if(number % 2 == 0) {
+      console.log('number is even')
+    } else {
+      console.log('number is odd')
+    }
+  }
+  
+  numberOddOrEven();
